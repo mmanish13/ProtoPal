@@ -11,7 +11,7 @@ public   overallrisk = true;
   inclusionCriteria;
   exclusionCriteria;
   finalReport;
-  src = "./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf";
+  src = "./assets/Protopal_Final_Report.pdf";
 
 
   constructor() { }

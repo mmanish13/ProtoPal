@@ -22,6 +22,7 @@ export class ViewProtocolComponent implements OnInit {
   generateRisk()
   {
     this.router.navigate(["About"]);
+
   }
 
   selectAll() {

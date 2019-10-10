@@ -14,7 +14,7 @@ export class ActiveDraftProtocolComponent implements OnInit {
   therapauticArea ;
   phase;
   studyType;
-  src = "./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf";
+  src = "./assets/Prot_SAP_50.pdf";
   fileToUpload: File = null;
   showpdf = false;
 

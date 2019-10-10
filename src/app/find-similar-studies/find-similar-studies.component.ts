@@ -23,4 +23,8 @@ search()
 {
   this.router.navigate(["viewProtocol"]);
 }
+generateRisk()
+{
+  this.router.navigate(["viewProtocol"]);
+}
 }

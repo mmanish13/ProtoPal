@@ -11,7 +11,32 @@
                         <label for="id" class="col-sm-4 col-form-label font-weight-bold">Therapautic Area*</label>
                         <div class="col-sm-7">
                             <div class="md-form mt-0">
-                                <input mdbInput type="search" class="form-control mdb-autocomplete" id="id">
+                                <select class="form-control" id="college" name="college_name" [(ngModel)]="therapauticArea">
+						<option>Respiratory</option>
+						<option>Infectious Diseases</option>
+						<option>Metabolic</option>
+						<option>Neurosciences</option>
+						<option>Urology</option>
+						<option>Cardiovascular Diseases</option>
+						<option>Oncology</option>
+						<option>Musculoskeletal Diseases</option>
+						<option>Dermatology</option>
+						<option>Inflammation</option>
+						<option>Gastrointestinal</option>
+						<option>Vaccines Prophylactic</option>
+						<option>Vaccines Therapeutic</option>
+						<option>Ophthalmology</option>
+						<option>Vaccines</option>
+						<option>Anesthesiology</option>
+						<option>Not Applicable</option>
+						<option>Autoimmune</option>
+						<option>Other</option>
+						<option>Hematology</option>
+						<option>Nutrition</option>
+						<option>Nicotine Dependence</option>
+						<option>Oral Health</option>
+						<option>Nephrology</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -20,7 +45,42 @@
                         <label for="id" class="col-sm-4 col-form-label font-weight-bold">Study Type*</label>
                         <div class="col-sm-7">
                             <div class="md-form mt-0">
-                                <input mdbInput type="text" class="form-control" id="id">
+                                <select class="form-control" id="college" name="college_name" [(ngModel)]="studyType">
+						<option>Intv-Clinical Trial</option>
+						<option>Interventional</option>
+						<option>Intv-Other</option>
+						<option>Non Intv-Other</option>
+						<option>Non Intv-Health Outcomes</option>
+						<option>Intv-Post Marketing</option>
+						<option>Intv-Methodology</option>
+						<option>Non Intv-Epidemiology</option>
+						<option>Intv-Genetics</option>
+						<option>Non-Intervent-clin pharm</option>
+						<option>Non Intv-Methodology</option>
+						<option>Intv-Epidemiology</option>
+						<option>Non Intv-Genetics</option>
+						<option>Non Intv-Meta/Pooled Analysis</option>
+						<option>Non Intv-Microbiology</option>
+						<option>Low Intv-Epidemiology</option>
+						<option>Non-Interventional</option>
+						<option>Non Intv-Post Marketing</option>
+						<option>Interventional-microbiology</option>
+						<option>Non-Intervent-epidemiology</option>
+						<option>Interventional-post marketing</option>
+						<option>Non-Intervent-meta analysis</option>
+						<option>Low Intv-Health Outcomes</option>
+						<option>Intv-Health Outcomes</option>
+						<option>Non-Intervent-post marketing</option>
+						<option>Non-Intervent-health outcomes</option>
+						<option>TBD</option>
+						<option>Low Intv-Methodology</option>
+						<option>Interventional-sensory</option>
+						<option>Non-Intervent-sensory</option>
+						<option>Low Intv-Clinical Trial</option>
+						<option>Low Intv-Other</option>
+						<option>Low Intv-Post Marketing</option>
+						<option>Intv-Interaction</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -29,7 +89,14 @@
                         <label for="id" class="col-sm-4 col-form-label font-weight-bold">Phase*</label>
                         <div class="col-sm-7">
                             <div class="md-form mt-0">
-                                <input mdbInput type="text" class="form-control" id="id">
+                                <select class="form-control" id="college" name="college_name" [(ngModel)]="phase">
+						<option>PHASE IIIB</option>
+						<option>PHASE I</option>
+						<option>PHASE IIA</option>
+						<option>PHASE IIIA</option>
+						<option>PHASE IIB</option>
+						<option>PHASE IV</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -78,7 +145,7 @@
                         <label for="id" class="col-sm-4 col-form-label font-weight-bold">Investigator Sponsored</label>
                         <div class="col-sm-7">
                             
-                                    <div class="row">
+                            <div class="row">
                                             <div class="custom-control custom-radio offset-1 col-5">
                                               <input type="radio" class="custom-control-input" id="defaultUncheckeds" name="defaultExampleRadios" mdbInput>
                                               <label class="custom-control-label font-weight-bold" for="defaultUncheckeds">Yes</label>
@@ -108,13 +175,13 @@
                             
                                     <div class="row">
                                             <div class="custom-control custom-radio offset-1 col-5">
-                                              <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadio" mdbInput>
-                                              <label class="custom-control-label font-weight-bold" for="defaultUnchecked">Yes</label>
+                                              <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadio" checked mdbInput>
+                                              <label class="custom-control-label font-weight-bold" for="defaultChecked">Yes</label>
                                             </div>
                                   
                                             <div class="custom-control custom-radio col-6">
-                                              <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadio" checked mdbInput>
-                                              <label class="custom-control-label font-weight-bold" for="defaultChecked">No</label>
+                                              <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadio" mdbInput>
+                                              <label class="custom-control-label font-weight-bold" for="defaultUnchecked">No</label>
                                             </div>
                             
                         </div>
@@ -160,7 +227,7 @@
             </div> -->
             <div class="form-group row text-center">
                 <div class="col-sm">
-                    <button type="submit" class="btn btn-info btn-md" (click)="basicModal.show()">
+                    <button type="submit" class="btn btn-info btn-md" (click)="generateRisk()">
                         <mdb-icon fas icon="search"></mdb-icon> Find
                     </button>
                 </div>
@@ -230,7 +297,7 @@
             <div class="form-group row text-center">
                 <div class="col-sm">
 
-                    <button type="button" mdbBtn color="primary" class="btn btn-info btn-md" (click)="basicModal.show()" mdbWavesEffect>
+                    <button type="button" mdbBtn color="primary" class="btn btn-info btn-md" mdbWavesEffect (click)="search()" >
                         <mdb-icon fas icon="search"></mdb-icon> Find</button>
                 </div>
                 <div class="col-md">
@@ -243,24 +310,3 @@
     </mdb-card-body>
 </mdb-card>
 
-<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-                    <span aria-hidden="true">×</span>
-                </button>
-                <h4 class="modal-title w-100" id="myModalLabel">Confirmation Box</h4>
-            </div>
-            <div class="modal-body">
-                Do you want to proceed with the selection to generate a risk score?
-            </div>
-            <div class="modal-footer">
-                <button type="button" mdbBtn color="primary" class="btn btn-success btn-md" mdbWavesEffect (click)="search()">Yes</button>
-                <button type="button" mdbBtn color="primary" class="btn btn-info btn-md" mdbWavesEffect (click)="basicModal.hide()">Refine Search</button>
-                <button type="button" mdbBtn color="secondary" class="btn btn-danger btn-md" aria-label="Close" (click)="basicModal.hide()"
-                    mdbWavesEffect>Cancel</button>
-            </div>
-        </div>
-    </div>
-</div>

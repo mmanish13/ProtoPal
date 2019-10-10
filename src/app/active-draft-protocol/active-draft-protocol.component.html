@@ -6,24 +6,24 @@
   </div>
 </div>
 
-<div class="container row">
-  <div class="col-7">
+<div class="container row statusBox">
+  <div class="col-8 statusBox">
     <section class="text-center my-5  border border-light p-5 ">
       <!-- Grid row -->
       <div class="row">
         <!-- Grid column -->
         <!-- *ngIf = "saveprotocol" -->
         <div *ngIf="showprotocol" class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-          <div class="card card-cascade narrower card-ecommerce">
+          <div class="card card-cascade narrower card-ecommerce boxsize">
             <div class="card-body card-body-cascade text-center" style="background-color:skyblue;">
               <p class="card-text">A Phase 1, Single Ascending Dose, Randomized, Double-Blind, Placebo-Controlled Study to ...
-                <br>
+                <br><br>
                 <u>Status : Not Started</u>
-                <br>
+                <br><br>
                 <a (click)="Upload()">
                   <h1>
                     <mdb-icon fas icon="file-pdf"></mdb-icon>
-                  </h1>
+                  </h1><br>
                   <br> HT - Preview Protocol
                 </a>
               </p>
@@ -31,13 +31,13 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-          <div class="card card-cascade narrower card-ecommerce">
+          <div class="card card-cascade narrower card-ecommerce boxsize">
             <div class="card-body card-body-cascade text-center">
               <p class="card-text">Assessment of prospective CYP2C19 genotype guided Dosing of Anti-Platelet Therapy in ...
-                <br>
+                <br><br>
                 <u>Status : In Progress</u>
-                <br>
-                <a href="./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf" class="icon-block" target="_blank">
+                <br><br>
+                <a href="./assets/Prot_SAP_3.pdf" class="icon-block" target="_blank">
                   <h1>
                     <mdb-icon fas icon="file-pdf"></mdb-icon>
                   </h1>
@@ -49,15 +49,15 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-          <div class="card card-cascade narrower card-ecommerce">
+          <div class="card card-cascade narrower card-ecommerce boxsize">
             <div class="card-body card-body-cascade text-center">
               <p class="card-text">Endovascular exclusion of Abdominal Aortic Aneursyms in ...
-                <br>
-                <u>Status : Status Completed</u>
+                <br><br>
+                <u>Status : Completed</u>
                 <br>
                 <u>Risk Score</u>
-                <br>
-                <a href="./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf" class="icon-block" target="_blank">
+                <br><br>
+                <a href="./assets/Prot_SAP_29.pdf" class="icon-block" target="_blank">
                   <h1>
                     <mdb-icon fas icon="file-pdf"></mdb-icon>
                   </h1>
@@ -79,8 +79,6 @@
     </section>
   </div>
 </div>
-
-
 
 
 
@@ -135,17 +133,30 @@
                   <div class="md-form mt-0">
                     <!-- <input mdbInput [(ngModel)]="therapauticArea"  type="search" class="form-control mdb-autocomplete" id="id" > -->
                     <select class="form-control" id="college" name="college_name" [(ngModel)]="therapauticArea">
-
-                      <option>Cardiovascular</option>
-                      <option>Hypertension</option>
-                      <option>Oncology</option>
-                      <option>High Pressure</option>
-                      <option>Lung Disease</option>
-                      <option>Central Nervous System</option>
-                      <option>Cardiovascular</option>
-                      <option>Dermatology</option>
-                      <option>Gastroenterology</option>
-                      <option>Anti-infectives</option>
+						<option>Respiratory</option>
+						<option>Infectious Diseases</option>
+						<option>Metabolic</option>
+						<option>Neurosciences</option>
+						<option>Urology</option>
+						<option>Cardiovascular Diseases</option>
+						<option>Oncology</option>
+						<option>Musculoskeletal Diseases</option>
+						<option>Dermatology</option>
+						<option>Inflammation</option>
+						<option>Gastrointestinal</option>
+						<option>Vaccines Prophylactic</option>
+						<option>Vaccines Therapeutic</option>
+						<option>Ophthalmology</option>
+						<option>Vaccines</option>
+						<option>Anesthesiology</option>
+						<option>Not Applicable</option>
+						<option>Autoimmune</option>
+						<option>Other</option>
+						<option>Hematology</option>
+						<option>Nutrition</option>
+						<option>Nicotine Dependence</option>
+						<option>Oral Health</option>
+						<option>Nephrology</option>
                     </select>
                   </div>
                 </div>
@@ -157,11 +168,40 @@
                   <div class="md-form mt-0">
                     <!-- <input mdbInput [(ngModel)]="studyType" type="text" class="form-control" id="id"> -->
                     <select class="form-control" id="college" name="college_name" [(ngModel)]="studyType">
-
-                      <option>Randomized</option>
-                      <option>Double-blind</option>
-                      <option>Placebo-controlled</option>
-                      <option>Crossover</option>
+						<option>Intv-Clinical Trial</option>
+						<option>Interventional</option>
+						<option>Intv-Other</option>
+						<option>Non Intv-Other</option>
+						<option>Non Intv-Health Outcomes</option>
+						<option>Intv-Post Marketing</option>
+						<option>Intv-Methodology</option>
+						<option>Non Intv-Epidemiology</option>
+						<option>Intv-Genetics</option>
+						<option>Non-Intervent-clin pharm</option>
+						<option>Non Intv-Methodology</option>
+						<option>Intv-Epidemiology</option>
+						<option>Non Intv-Genetics</option>
+						<option>Non Intv-Meta/Pooled Analysis</option>
+						<option>Non Intv-Microbiology</option>
+						<option>Low Intv-Epidemiology</option>
+						<option>Non-Interventional</option>
+						<option>Non Intv-Post Marketing</option>
+						<option>Interventional-microbiology</option>
+						<option>Non-Intervent-epidemiology</option>
+						<option>Interventional-post marketing</option>
+						<option>Non-Intervent-meta analysis</option>
+						<option>Low Intv-Health Outcomes</option>
+						<option>Intv-Health Outcomes</option>
+						<option>Non-Intervent-post marketing</option>
+						<option>Non-Intervent-health outcomes</option>
+						<option>TBD</option>
+						<option>Low Intv-Methodology</option>
+						<option>Interventional-sensory</option>
+						<option>Non-Intervent-sensory</option>
+						<option>Low Intv-Clinical Trial</option>
+						<option>Low Intv-Other</option>
+						<option>Low Intv-Post Marketing</option>
+						<option>Intv-Interaction</option>
                     </select>
                   </div>
                 </div>
@@ -173,20 +213,17 @@
                   <div class="md-form mt-0">
                     <!-- <input mdbInput [(ngModel)]="phase" type="text" class="form-control" id="id"> -->
                     <select class="form-control" id="college" name="college_name" [(ngModel)]="phase">
-
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>Early</option>
-                      <option>2a Nervous System</option>
-                      <option>3a</option>
-                      <option>Multi phase </option>
+						<option>PHASE IIIB</option>
+						<option>PHASE I</option>
+						<option>PHASE IIA</option>
+						<option>PHASE IIIA</option>
+						<option>PHASE IIB</option>
+						<option>PHASE IV</option>
                     </select>
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="form-group row text-center">
                 <div class="custom-control custom-radio col-6">
                   <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
                   <label class="custom-control-label font-weight-bold" for="defaultUnchecked">Upload from Protocol Creator</label>

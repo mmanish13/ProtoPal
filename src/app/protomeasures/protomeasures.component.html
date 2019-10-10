@@ -1,40 +1,40 @@
 <ul class="nav nav-tabs cyan" id="myTab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link" (click)="overallRisk()">Overall Risk</a>
+        <a class="nav-link heading" (click)="overallRisk()">Overall Risk</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" (click)="inclusion()">Inclusion Criteria</a>
+        <a class="nav-link heading" (click)="inclusion()">Inclusion Criteria</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" (click)="exclusion()">Exclusion Criteria</a>
+        <a class="nav-link heading" (click)="exclusion()">Exclusion Criteria</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" (click)="treatmentArm()">Treatment Arm</a>
+        <a class="nav-link heading" (click)="treatmentArm()">Treatment Arm</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link">Procedure</a>
+        <a class="nav-link heading">Procedure</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link">Administration</a>
+        <a class="nav-link heading">Administration</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link">Study Team</a>
+        <a class="nav-link heading">Study Team</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" (click)="report()">Final Report</a>
+        <a class="nav-link heading" (click)="report()">Final Report</a>
     </li>
 
 </ul>
 
 
 <div *ngIf="overallrisk" class="tab-content">
-    <p>Overall Risk for the reference study is high in the area of Treatment Arm, Enrolment, Administration and Study Team</p>
+    <br><p>Overall Risk for the reference study is high in the area of Treatment Arm, Enrolment, Administration and Study Team</p>
     <img src="./assets/Chart.png" class="col-md-6" alt="Responsive image">
 </div>
 
 <div *ngIf="treatmentarm" class="tab-content">
-    <p> Number of study arms in reference study – 5 Median study arms in past studies – 3.2
-        <br> Analysis: The number of treatment arms in the reference study is more than the medium number of arms from the similar
+    <br><p> Number of study arms in reference study – 5 Median study arms in past studies – 3.2</p>
+        <br> <p>Analysis: The number of treatment arms in the reference study is more than the medium number of arms from the similar
         studies. Either increase the number of subjects in each arm for patient enrolment shall be an issue during study
         conduct.
     </p>
@@ -42,7 +42,7 @@
 </div>
 
 <div *ngIf="inclusionCriteria" class="tab-content">
-        <p> Other criteria considered in similar protocols:<br>
+        <br><p> Other criteria considered in similar protocols:<br><br>
                 1. Hospitalized for AHF with the anticipated requirement of intravenous therapy (including IV diuretics) for at least 48 hours ~ found in 50% of similar protocols
                 2. Able to be randomized within 16 hours from presentation to the hospital, including the emergency department~ found in 60% of similar protocols
                 
@@ -51,19 +51,22 @@
     </div>
 
     <div *ngIf="exclusionCriteria" class="tab-content">
-            <p> Other criteria considered in similar protocols:<br>
+            <br><p> Other criteria considered in similar protocols:<br><br>
                     1. Patients with blood pressure > 180 mmHg at the time of randomization or persistent heart rate > 130 bpm
-                    2. Temperature >38.5°C (oral or equivalent) or sepsis or active infection requiring IV antimicrobial treatment
+                 <br>  2. Temperature >38.5°C (oral or equivalent) or sepsis or active infection requiring IV antimicrobial treatment
                     
             </p>
             <img src="./assets/exclusion.png" class="col-md-12" alt="Responsive image">
         </div>
 
-        <div *ngIf="finalReport" class="tab-content">
-                <p> Preview protocol with insights tagged per sections 
-
-                </p>
-                <div class="pdf-container scrollmenu">
+        <div *ngIf="finalReport" class="tab-content"><br>
+            <p> Final generated protopal report: 
+				<a href="./assets/Protopal_Final_Report.pdf" class="btn btn-info btn-lg" download="./assets/Protopal_Final_Report.pdf">
+				  <span class=" fas fa-download glyphicon glyphicon-download-alt"></span>
+				  &nbsp;&nbsp;Download
+				</a>
+      </p>
+                <div class="pdf-container scrollmenuFinal">
                         <pdf-viewer [src]="src" [original-size]="false"></pdf-viewer>
                       </div>
             </div>
