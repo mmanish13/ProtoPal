@@ -1,0 +1,45 @@
+<ul class="nav nav-tabs cyan" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" (click)="overallRisk()">Overall Risk</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="treatmentArm()">Treatment Arm</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">Inform Consent</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" >Enrolment</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">Randomisation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">Administration</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" >Study Team</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" >Follow-up</a>
+    </li>
+</ul>
+
+
+<div *ngIf="overallrisk" class= "tab-content">
+        <p>Overall Risk for the reference study is high in the area of Treatment Arm, Enrolment, Administration and Study Team</p>
+        <img src="./assets/Chart.png" class="col-md-6" alt="Responsive image">
+</div>
+
+<div *ngIf="treatmentarm" class= "tab-content">    
+          <p> Number of study arms in reference study – 5 
+                Median study arms in past studies – 3.2
+                <br>
+                Analysis:
+                The number of treatment arms in the reference study is more than the medium number of arms from the similar studies. 
+                Either increase the number of subjects in each arm for patient enrolment shall be an issue during study conduct.</p> 
+                <img src="./assets/treatmentArms.png" class="col-md-12" alt="Responsive image">
+                
+      
+
+</div>

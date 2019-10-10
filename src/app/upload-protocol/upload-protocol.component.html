@@ -1,0 +1,81 @@
+
+<mdb-card>
+        <mdb-card-header class="cyan text-white">
+          <mdb-icon fas icon="edit"></mdb-icon> Upload Protocol
+        </mdb-card-header>
+        <mdb-card-body>
+          <div>
+            <div class="form-group row">
+              <!-- Material input -->
+              <label for="id" class="col-sm-2 col-form-label font-weight-bold">Study Title*</label>
+              <div class="col-sm-10">
+                <div class="md-form mt-0">
+                  <input mdbInput [(ngModel)]="studyTitle" type="text" class="form-control" id="id" >
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+                <!-- Material input -->
+                <label for="id" class="col-sm-2 col-form-label font-weight-bold">Study ID*</label>
+                <div class="col-sm-10">
+                  <div class="md-form mt-0">
+                    <input mdbInput [(ngModel)]="studyID" type="text" class="form-control" id="id" >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                  <!-- Material input -->
+                  <label for="id" class="col-sm-2 col-form-label font-weight-bold">Amendment Title</label>
+                  <div class="col-sm-10">
+                    <div class="md-form mt-0">
+                      <input mdbInput [(ngModel)]="amendmentTitle" type="text" class="form-control" id="id" >
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                    
+                    <label for="id" class="col-sm-2 col-form-label font-weight-bold">Therapautic Area</label>
+                    <div class="col-sm-10">
+                      <div class="md-form mt-0">
+                        <input mdbInput [(ngModel)]="therapauticArea"  type="search" class="form-control mdb-autocomplete" id="id" >
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group row">
+                      <!-- Material input -->
+                      <label for="id" class="col-sm-2 col-form-label font-weight-bold">Study Type</label>
+                      <div class="col-sm-10">
+                        <div class="md-form mt-0">
+                          <input mdbInput [(ngModel)]="studyType" type="text" class="form-control" id="id" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <!-- Material input -->
+                        <label for="id" class="col-sm-2 col-form-label font-weight-bold">Phase</label>
+                        <div class="col-sm-10">
+                          <div class="md-form mt-0">
+                            <input mdbInput [(ngModel)]="phase" type="text" class="form-control" id="id" >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row text-center">
+                            <div class="col-md">
+                              <button type="submit" class="btn btn-info btn-md" (click)="UploadProtocol()">
+                                <mdb-icon fas icon="save"></mdb-icon> Upload
+                              </button>
+                              </div>
+                              <div class="col-md">
+                              <button type="submit" class="btn btn-danger btn-md" (click)="reset()">
+                                <mdb-icon fas icon="undo-alt"></mdb-icon> Reset
+                              </button>
+                            </div>
+                          </div>
+          
+                        </div>
+            </mdb-card-body>
+            </mdb-card>
+
+            <!-- Modal -->

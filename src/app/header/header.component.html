@@ -1,0 +1,72 @@
+<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue fixed-top">
+  <mdb-navbar-brand>
+    <img src="./assets/Cognizant.png" style="size: 1px"> &nbsp;
+
+    <a class="navbar-brand" href="#">
+      <mdb-icon fas icon="podcast"></mdb-icon> ProtoPal
+    </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="/Active-Draft-Protocol" class="nav-link waves-light" mdbWavesEffect>Active Draft Protocol</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="/Find-Similar-Studies" class="nav-link waves-light" mdbWavesEffect>Find Similar Studies</a>
+      </li>
+    </ul>
+    <span class="navbar-text white-text">
+      <i class="fas fa-user-tie"></i> John Smith
+      <br>
+      <i class="fas fa-tags"></i> Protocol Author
+    </span>
+  </links>
+</mdb-navbar> -->
+
+
+
+<mdb-navbar  SideClass="navbar navbar-expand navbar-dark blue"> 
+
+  <mdb-navbar-brand>
+     
+    <a class="navbar-brand" href="#">
+        <links><img  src='./assets/Cognizant.png'/> &nbsp;</links>
+      <b><h1> <mdb-icon fas icon="podcast"></mdb-icon> ProtoPal</h1> </b>
+    </a>
+  </mdb-navbar-brand>
+  
+  
+  <links class="tabcolor">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a *ngIf= "shownavbar" routerLink="/Active-Draft-Protocol" class=" draft nav-link waves-light" mdbWavesEffect>Active Draft Protocol</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a *ngIf= "shownavbar" routerLink="/Find-Similar-Studies" class="find nav-link waves-light" mdbWavesEffect>Find Similar Studies</a>
+      </li>       
+    </ul>
+    <br>
+   </links>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <links class="offset-md-3">
+      <p *ngIf= "shownavbar" class="navbar-text white-text">
+          <i class="fas fa-id-badge"></i> &nbsp; John Smith 
+        </p>
+          
+          
+          <p *ngIf= "shownavbar" class="navbar-text white-text">
+              <i class="fas fa-tags"></i> &nbsp; Protocol Author
+          </p>
+          <br>
+          <a (click)="logout()" href="#" *ngIf= "shownavbar" class="navbar-text white-text">
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;Logout
+          </a>
+        
+  </links>
+  
+        
+     
+ 
+  
+</mdb-navbar>

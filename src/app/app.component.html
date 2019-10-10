@@ -1,0 +1,73 @@
+<!-- 
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue"> 
+  <mdb-navbar-brand>
+    <img src='./assets/Cognizant.png'/> &nbsp;
+    <a class="navbar-brand" href="#">
+        <mdb-icon fas icon="podcast"></mdb-icon> ProtoPal
+    </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="/Active-Draft-Protocol" class="nav-link waves-light" mdbWavesEffect>Active Draft Protocol</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="/Find-Similar-Studies" class="nav-link waves-light" mdbWavesEffect>Find Similar Studies</a>
+      </li>   
+    
+    </ul>
+    <span class="navbar-text white-text">
+        <i class="fas fa-male"></i>John Smith
+      </span>
+      <br>
+      <br>
+      &nbsp;
+      <span class="navbar-text white-text">
+          <i class="fas fa-tags"></i>Protocol Author
+        </span>
+  </links>
+  </mdb-navbar> -->
+  
+  <app-header></app-header>
+  <!-- <div class="container">  
+    <app-login></app-login>
+  </div> -->
+  
+  <!-- <div *ngIf= "hidelogin" class="card offset-md-2 col-md-8 offset-md-2">
+    <div class="card-header text-center card  col-md-12">
+        Login to Protopal
+    </div>
+  
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Login ID">              
+        </div>
+  
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+  
+        <button type="button" 
+          class="btn btn-primary"
+          (click)="login()">Login</button>
+      </form>
+    </div>
+  </div> -->
+
+  <div  *ngIf= "hidelogin"  class="text-center border border-light p-5 offset-md-3 col-md-6 offset-md-3">
+    <p class="h4 mb-4">Sign In</p>
+    <input type="text" class="form-control mb-4" placeholder="Login ID" [(ngModel)]="username">
+    <input type="password" class="form-control mb-4" placeholder="Password" [(ngModel)]="password">
+    <button mdbBtn color="info" block="true" class="col-md-6" type="submit" (click)="login()">Sign In</button>
+</div>
+  <br>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+
+<!-- Default form login -->

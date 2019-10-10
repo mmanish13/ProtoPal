@@ -1,0 +1,178 @@
+<div class="form-group row text-center">
+  <div class="col-md-4">
+    <button type="button" class="btn-lg btn-info btn-md" (click)="basicModal.show()" mdbWavesEffect>
+      <mdb-icon fas icon="plus"></mdb-icon> Upload Protocol
+    </button>
+  </div>
+</div>
+<section class="text-center my-5  border border-light p-5 offset-md-1 col-md-10 offset-md-1" >
+
+  <!-- Grid row -->
+  <div class="row">
+    <!-- Grid column -->
+    <!-- *ngIf = "saveprotocol" -->
+    <div *ngIf="showprotocol" class="col-lg-4 col-md-6 mb-lg-0 mb-4" >
+        <div class="card card-cascade narrower card-ecommerce">
+          <div class="card-body card-body-cascade text-center" style="background-color:skyblue;">
+              <p   class="card-text">A Phase 1, Single Ascending Dose, Randomized, Double-Blind, Placebo-Controlled Study to ...
+                  <br>
+                  <u>Status : Not Started</u>
+                </p>
+          </div>
+        </div>
+      </div>
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+      <div class="card card-cascade narrower card-ecommerce">
+        <div class="card-body card-body-cascade text-center">
+          <p class="card-text">Assessment of prospective CYP2C19 genotype guided Dosing of Anti-Platelet Therapy in ...
+            <br>
+            <u>Status : In Progress</u>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+      <div class="card card-cascade narrower card-ecommerce">
+        <div class="card-body card-body-cascade text-center">
+          <p class="card-text">Endovascular exclusion of  Abdominal Aortic Aneursyms in ...
+            <br>
+            <u>Status : Status Completed</u>
+            <br>
+            <u>Risk Score</u>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div mdbModal #basicModal="mdbModal" class="modal fade col-md-12" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel">Upload Protocol</h4>
+      </div>
+      <div class="modal-body">
+
+        <mdb-card>
+          <mdb-card-header class="cyan text-white">
+            <mdb-icon fas icon="edit"></mdb-icon> Upload Protocol
+          </mdb-card-header>
+          <mdb-card-body>
+            <div>
+              <div class="form-group row">
+                <!-- Material input -->
+                <label for="id" class="col-sm-2 col-form-label font-weight-bold">Study Title*</label>
+                <div class="col-sm-10">
+                  <div class="md-form mt-0">
+                    <input mdbInput [(ngModel)]="studyTitle" type="text" class="form-control" id="id">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <!-- Material input -->
+                <label for="id" class="col-sm-2 col-form-label font-weight-bold">Study ID*</label>
+                <div class="col-sm-10">
+                  <div class="md-form mt-0">
+                    <input mdbInput [(ngModel)]="studyID" type="text" class="form-control" id="id">
+
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <!-- Material input -->
+                <label for="id" class="col-sm-2 col-form-label font-weight-bold">Amendment Number</label>
+                <div class="col-sm-10">
+                  <div class="md-form mt-0">
+                    <input mdbInput [(ngModel)]="amendmentTitle" type="text" class="form-control" id="id">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="id" class="col-sm-2 col-form-label font-weight-bold">Therapautic Area</label>
+                <div class="col-sm-10">
+                  <div class="md-form mt-0">
+                    <!-- <input mdbInput [(ngModel)]="therapauticArea"  type="search" class="form-control mdb-autocomplete" id="id" > -->
+                    <select class="form-control" id="college" name="college_name" [(ngModel)]="therapauticArea">
+                        
+                      <option>Cardiovascular</option>
+                      <option>Hypertension</option>
+                      <option>Oncology</option>
+                      <option>High Pressure</option>
+                      <option>Lung Disease</option>
+                      <option>Central Nervous System</option>
+                      <option>Cardiovascular</option>
+                      <option>Dermatology</option>
+                      <option>Gastroenterology</option>
+                      <option>Anti-infectives</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <!-- Material input -->
+                <label for="id" class="col-sm-2 col-form-label font-weight-bold">Study Type</label>
+                <div class="col-sm-10">
+                  <div class="md-form mt-0">
+                    <!-- <input mdbInput [(ngModel)]="studyType" type="text" class="form-control" id="id"> -->
+                    <select class="form-control" id="college" name="college_name" [(ngModel)]="studyType">
+                      
+                      <option>Randomized</option>
+                      <option>Double-blind</option>
+                      <option>Placebo-controlled</option>
+                      <option>Crossover</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <!-- Material input -->
+                <label for="id" class="col-sm-2 col-form-label font-weight-bold">Phase</label>
+                <div class="col-sm-10">
+                  <div class="md-form mt-0">
+                    <!-- <input mdbInput [(ngModel)]="phase" type="text" class="form-control" id="id"> -->
+                    <select class="form-control" id="college" name="college_name" [(ngModel)]="phase">
+                      
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>Early</option>
+                      <option>2a Nervous System</option>
+                      <option>3a</option>
+                      <option>Multi phase </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row text-center">
+                <div class="col-md">
+                  <button type="submit" class="btn btn-info btn-md" (click)=" basicModal.hide()" (click)=" UploadProtocol()">
+                    <mdb-icon fas icon="save"></mdb-icon> Upload
+                  </button>
+                </div>
+                <div class="col-md">
+                  <button type="submit" class="btn btn-danger btn-md" (click)="basicModal.hide()" (click)=" cancel()">
+                    <mdb-icon fas icon="undo-alt"></mdb-icon> Cancel
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+
+        <!-- Modal -->
+
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
