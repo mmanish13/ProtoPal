@@ -14,7 +14,9 @@ export class ActiveDraftProtocolComponent implements OnInit {
   therapauticArea ;
   phase;
   studyType;
-  
+  src = "./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf";
+  fileToUpload: File = null;
+  showpdf = false;
 
   constructor(private router: Router){}
   upload() : void {   
@@ -23,20 +25,26 @@ export class ActiveDraftProtocolComponent implements OnInit {
   }
   UploadProtocol()
   {
+    
     this.showprotocol = true;
     this.showpop = false;
     this.therapauticArea = '';
     this.studyType = '';
     this.phase = '';
   }
-
+Upload()
+{
+  this.showpdf = true;
+}
   cancel()
   {
     this.therapauticArea = '';
     this.studyType = '';
     this.phase = '';
   }
-
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+}
   ngOnInit() {
     
   }

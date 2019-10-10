@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ProtomeasuresComponent implements OnInit {
 public   overallrisk = true;
   public treatmentarm : boolean ;
+  inclusionCriteria;
+  exclusionCriteria;
+  finalReport;
+  src = "./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf";
+
 
   constructor() { }
 
@@ -17,13 +22,40 @@ public   overallrisk = true;
   {
 this.overallrisk = true;
 this.treatmentarm = false;
+this.inclusionCriteria = false;
+this.exclusionCriteria = false;
+this.finalReport =false
   }
   treatmentArm()
 {
-
   this.overallrisk = false;
   this.treatmentarm = true;
+  this.inclusionCriteria = false;
+  this.exclusionCriteria = false;
+  this.finalReport =false
 }
-
-
+inclusion()
+{
+  this.overallrisk = false;
+  this.treatmentarm = false;
+  this.inclusionCriteria = true;
+  this.exclusionCriteria = false;
+  this.finalReport =false
+}
+exclusion()
+{
+  this.overallrisk = false;
+  this.treatmentarm = false;
+  this.inclusionCriteria = false;
+  this.exclusionCriteria = true;
+  this.finalReport =false
+}
+report()
+{
+  this.overallrisk = false;
+  this.treatmentarm = false;
+  this.inclusionCriteria = false;
+  this.exclusionCriteria = false;
+  this.finalReport =true
+}
 }

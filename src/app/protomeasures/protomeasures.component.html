@@ -3,43 +3,67 @@
         <a class="nav-link" (click)="overallRisk()">Overall Risk</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" (click)="inclusion()">Inclusion Criteria</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="exclusion()">Exclusion Criteria</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" (click)="treatmentArm()">Treatment Arm</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link">Inform Consent</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" >Enrolment</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link">Randomisation</a>
+        <a class="nav-link">Procedure</a>
     </li>
     <li class="nav-item">
         <a class="nav-link">Administration</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" >Study Team</a>
+        <a class="nav-link">Study Team</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" >Follow-up</a>
+        <a class="nav-link" (click)="report()">Final Report</a>
     </li>
+
 </ul>
 
 
-<div *ngIf="overallrisk" class= "tab-content">
-        <p>Overall Risk for the reference study is high in the area of Treatment Arm, Enrolment, Administration and Study Team</p>
-        <img src="./assets/Chart.png" class="col-md-6" alt="Responsive image">
+<div *ngIf="overallrisk" class="tab-content">
+    <p>Overall Risk for the reference study is high in the area of Treatment Arm, Enrolment, Administration and Study Team</p>
+    <img src="./assets/Chart.png" class="col-md-6" alt="Responsive image">
 </div>
 
-<div *ngIf="treatmentarm" class= "tab-content">    
-          <p> Number of study arms in reference study – 5 
-                Median study arms in past studies – 3.2
-                <br>
-                Analysis:
-                The number of treatment arms in the reference study is more than the medium number of arms from the similar studies. 
-                Either increase the number of subjects in each arm for patient enrolment shall be an issue during study conduct.</p> 
-                <img src="./assets/treatmentArms.png" class="col-md-12" alt="Responsive image">
+<div *ngIf="treatmentarm" class="tab-content">
+    <p> Number of study arms in reference study – 5 Median study arms in past studies – 3.2
+        <br> Analysis: The number of treatment arms in the reference study is more than the medium number of arms from the similar
+        studies. Either increase the number of subjects in each arm for patient enrolment shall be an issue during study
+        conduct.
+    </p>
+    <img src="./assets/treatmentArms.png" class="col-md-12" alt="Responsive image">
+</div>
+
+<div *ngIf="inclusionCriteria" class="tab-content">
+        <p> Other criteria considered in similar protocols:<br>
+                1. Hospitalized for AHF with the anticipated requirement of intravenous therapy (including IV diuretics) for at least 48 hours ~ found in 50% of similar protocols
+                2. Able to be randomized within 16 hours from presentation to the hospital, including the emergency department~ found in 60% of similar protocols
                 
-      
+        </p>
+        <img src="./assets/inclusion.png" class="col-md-12" alt="Responsive image">
+    </div>
 
-</div>
+    <div *ngIf="exclusionCriteria" class="tab-content">
+            <p> Other criteria considered in similar protocols:<br>
+                    1. Patients with blood pressure > 180 mmHg at the time of randomization or persistent heart rate > 130 bpm
+                    2. Temperature >38.5°C (oral or equivalent) or sepsis or active infection requiring IV antimicrobial treatment
+                    
+            </p>
+            <img src="./assets/exclusion.png" class="col-md-12" alt="Responsive image">
+        </div>
+
+        <div *ngIf="finalReport" class="tab-content">
+                <p> Preview protocol with insights tagged per sections 
+
+                </p>
+                <div class="pdf-container scrollmenu">
+                        <pdf-viewer [src]="src" [original-size]="false"></pdf-viewer>
+                      </div>
+            </div>

@@ -13,6 +13,7 @@ import { UploadProtocolComponent } from './upload-protocol/upload-protocol.compo
 import { StorageServiceModule } from 'ngx-webstorage-service';
 import { ProtomeasuresComponent } from './protomeasures/protomeasures.component';
 import { HeaderComponent } from './header/header.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer'; 
 
 const routes: Routes = [
   { path: 'viewProtocol', component: ViewProtocolComponent },
@@ -46,7 +47,8 @@ const routes: Routes = [
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(routes),
     FormsModule,
-     StorageServiceModule 
+     StorageServiceModule ,
+      PdfViewerModule 
   ],
   exports: [
     RouterModule

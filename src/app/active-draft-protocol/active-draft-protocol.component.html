@@ -5,47 +5,84 @@
     </button>
   </div>
 </div>
-<section class="text-center my-5  border border-light p-5 offset-md-1 col-md-10 offset-md-1" >
 
-  <!-- Grid row -->
-  <div class="row">
-    <!-- Grid column -->
-    <!-- *ngIf = "saveprotocol" -->
-    <div *ngIf="showprotocol" class="col-lg-4 col-md-6 mb-lg-0 mb-4" >
-        <div class="card card-cascade narrower card-ecommerce">
-          <div class="card-body card-body-cascade text-center" style="background-color:skyblue;">
-              <p   class="card-text">A Phase 1, Single Ascending Dose, Randomized, Double-Blind, Placebo-Controlled Study to ...
-                  <br>
-                  <u>Status : Not Started</u>
-                </p>
+<div class="container row">
+  <div class="col-7">
+    <section class="text-center my-5  border border-light p-5 ">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <!-- *ngIf = "saveprotocol" -->
+        <div *ngIf="showprotocol" class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+          <div class="card card-cascade narrower card-ecommerce">
+            <div class="card-body card-body-cascade text-center" style="background-color:skyblue;">
+              <p class="card-text">A Phase 1, Single Ascending Dose, Randomized, Double-Blind, Placebo-Controlled Study to ...
+                <br>
+                <u>Status : Not Started</u>
+                <br>
+                <a (click)="Upload()">
+                  <h1>
+                    <mdb-icon fas icon="file-pdf"></mdb-icon>
+                  </h1>
+                  <br> HT - Preview Protocol
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+          <div class="card card-cascade narrower card-ecommerce">
+            <div class="card-body card-body-cascade text-center">
+              <p class="card-text">Assessment of prospective CYP2C19 genotype guided Dosing of Anti-Platelet Therapy in ...
+                <br>
+                <u>Status : In Progress</u>
+                <br>
+                <a href="./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf" class="icon-block" target="_blank">
+                  <h1>
+                    <mdb-icon fas icon="file-pdf"></mdb-icon>
+                  </h1>
+                  <br> HT - Preview Protocol
+                </a>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+          <div class="card card-cascade narrower card-ecommerce">
+            <div class="card-body card-body-cascade text-center">
+              <p class="card-text">Endovascular exclusion of Abdominal Aortic Aneursyms in ...
+                <br>
+                <u>Status : Status Completed</u>
+                <br>
+                <u>Risk Score</u>
+                <br>
+                <a href="./assets/Protopal Report for Clinical Trial Protocol CRLX030A2301  NCT01870778.pdf" class="icon-block" target="_blank">
+                  <h1>
+                    <mdb-icon fas icon="file-pdf"></mdb-icon>
+                  </h1>
+                  <br> HT - Final Report
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-      <div class="card card-cascade narrower card-ecommerce">
-        <div class="card-body card-body-cascade text-center">
-          <p class="card-text">Assessment of prospective CYP2C19 genotype guided Dosing of Anti-Platelet Therapy in ...
-            <br>
-            <u>Status : In Progress</u>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-      <div class="card card-cascade narrower card-ecommerce">
-        <div class="card-body card-body-cascade text-center">
-          <p class="card-text">Endovascular exclusion of  Abdominal Aortic Aneursyms in ...
-            <br>
-            <u>Status : Status Completed</u>
-            <br>
-            <u>Risk Score</u>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-</section>
+    </section>
+  </div>
+  <div *ngIf="showpdf" class="col-5">
+    <section>
+      <div class="pdf-container scrollmenu">
+        <pdf-viewer [src]="src" [original-size]="false"></pdf-viewer>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+
 
 <div mdbModal #basicModal="mdbModal" class="modal fade col-md-12" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
   aria-hidden="true">
@@ -58,7 +95,6 @@
         <h4 class="modal-title w-100" id="myModalLabel">Upload Protocol</h4>
       </div>
       <div class="modal-body">
-
         <mdb-card>
           <mdb-card-header class="cyan text-white">
             <mdb-icon fas icon="edit"></mdb-icon> Upload Protocol
@@ -99,7 +135,7 @@
                   <div class="md-form mt-0">
                     <!-- <input mdbInput [(ngModel)]="therapauticArea"  type="search" class="form-control mdb-autocomplete" id="id" > -->
                     <select class="form-control" id="college" name="college_name" [(ngModel)]="therapauticArea">
-                        
+
                       <option>Cardiovascular</option>
                       <option>Hypertension</option>
                       <option>Oncology</option>
@@ -121,7 +157,7 @@
                   <div class="md-form mt-0">
                     <!-- <input mdbInput [(ngModel)]="studyType" type="text" class="form-control" id="id"> -->
                     <select class="form-control" id="college" name="college_name" [(ngModel)]="studyType">
-                      
+
                       <option>Randomized</option>
                       <option>Double-blind</option>
                       <option>Placebo-controlled</option>
@@ -137,7 +173,7 @@
                   <div class="md-form mt-0">
                     <!-- <input mdbInput [(ngModel)]="phase" type="text" class="form-control" id="id"> -->
                     <select class="form-control" id="college" name="college_name" [(ngModel)]="phase">
-                      
+
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -150,9 +186,24 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="custom-control custom-radio col-6">
+                  <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
+                  <label class="custom-control-label font-weight-bold" for="defaultUnchecked">Upload from Protocol Creator</label>
+                </div>
+
+                <div class="custom-control custom-radio col-6">
+                  <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked mdbInput>
+                  <label class="custom-control-label font-weight-bold" for="defaultChecked">Upload from Local</label>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+              </div>
               <div class="form-group row text-center">
                 <div class="col-md">
-                  <button type="submit" class="btn btn-info btn-md" (click)=" basicModal.hide()" (click)=" UploadProtocol()">
+                  <button type="submit" class="btn btn-info btn-md" (click)=" frame.show()">
                     <mdb-icon fas icon="save"></mdb-icon> Upload
                   </button>
                 </div>
@@ -172,6 +223,39 @@
       </div>
       <div class="modal-footer">
 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #frame="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel">In which format is your protocol?</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="custom-control custom-radio offset-1 col-5">
+            <input type="radio" class="custom-control-input" id="defaultUncheckeds" name="defaultExampleRadios" mdbInput>
+            <label class="custom-control-label font-weight-bold" for="defaultUncheckeds">Sponsor format</label>
+          </div>
+
+          <div class="custom-control custom-radio col-6">
+            <input type="radio" class="custom-control-input" id="defaultCheckeds" name="defaultExampleRadios" checked mdbInput>
+            <label class="custom-control-label font-weight-bold" for="defaultCheckeds">Transcelerate</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn class="btn btn-info btn-md" (click)="frame.hide()" (click)="basicModal.hide()" (click)=" UploadProtocol()"
+          mdbWavesEffect>
+          <mdb-icon fas icon="save"></mdb-icon> Ok</button>
+        <button type="button" mdbBtn class="btn btn-danger btn-md" aria-label="Close" (click)="frame.hide()" mdbWavesEffect>
+          <mdb-icon fas icon="undo-alt"></mdb-icon> Cancel</button>
       </div>
     </div>
   </div>
